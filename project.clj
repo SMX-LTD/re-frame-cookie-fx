@@ -1,4 +1,4 @@
-(defproject com.smxemail/re-frame-cookie-fx "0.0.2-SNAPSHOT"
+(defproject com.smxemail/re-frame-cookie-fx "0.0.2"
   :description "A re-frame effects handler for setting or deleting cookies."
   :url "https://github.com/SMX-LTD/re-frame-cookie-fx.git"
   :license {:name         "Eclipse Public License - v 1.0"
