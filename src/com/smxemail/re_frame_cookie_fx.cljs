@@ -1,6 +1,6 @@
 (ns com.smxemail.re-frame-cookie-fx
   (:require
-    [cljs.spec :as s]
+    [cljs.spec.alpha :as s]
     [goog.net.cookies]
     [re-frame.core :refer [console dispatch reg-cofx reg-fx]]))
 
@@ -89,7 +89,7 @@
 (reg-fx
   :cookie/set
   (fn cookie-set-effect [options]
-    (when (= :cljs.spec/invalid (s/conform ::sequential-or-map options))
+    (when (= :cljs.spec.alpha/invalid (s/conform ::sequential-or-map options))
       (console :error (s/explain-str ::sequential-or-map options)))
     (cond
       (sequential? options)
@@ -125,7 +125,7 @@
 (reg-fx
   :cookie/remove
   (fn cookie-remove-effect [options]
-    (when (= :cljs.spec/invalid (s/conform ::sequential-or-map options))
+    (when (= :cljs.spec.alpha/invalid (s/conform ::sequential-or-map options))
       (console :error (s/explain-str ::sequential-or-map options)))
     (cond
       (sequential? options)
